@@ -35,5 +35,5 @@ clean:
 
 .PHONY: docker
 docker:
-	docker build --build-arg BINARY_VERSION=$(BINARY_VERSION) -t $(IMAGE_NAME) .
+	docker build -f ./Containerfile --build-arg BINARY_VERSION=$(BINARY_VERSION) -t $(IMAGE_NAME) .
 	@echo built image $(IMAGE_NAME)
